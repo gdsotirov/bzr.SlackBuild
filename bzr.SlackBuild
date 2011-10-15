@@ -19,7 +19,7 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: bzr.SlackBuild,v 1.4 2011/09/18 06:24:28 gsotirov Exp $
+# $Id: bzr.SlackBuild,v 1.5 2011/10/15 17:36:03 gsotirov Exp $
 #
 
 . ../../slack-package.conf
@@ -28,6 +28,8 @@ NAME=bzr
 VERSION=2.4.1
 BUILD=${BUILD:-1}
 ARCH=${ARCH:-i486}
+
+PYTHON_VERSION=`python -c 'import sys; print("%s.%s" % sys.version_info[:2])'`
 
 TMP=${TMP:-/tmp}
 CWD=${CWD:-`pwd`}
@@ -51,7 +53,7 @@ mkdir -p $PKG
 
 # Extract the source
 cd $TMP
-tar -xvf $CWD/$NAME-$VERSION.tar.gz || exit 1
+tar -xvf $CWD/$NAME-$VERSION.tar.?z* || exit 1
 cd $SRC
 fix_source
 
@@ -61,7 +63,9 @@ make docs || exit 2
 CFLAGS=$SLKCFLAGS \
 python setup.py build || exit 3
 
-python setup.py install --root=$PKG || exit 4
+python setup.py install \
+  --root=$PKG \
+  --install-lib usr/lib${LIBDIRSUFFIX}/python${PYTHON_VERSION}/site-packages || exit 4
 
 # Prepare
 DOCFILES="$DOCFILES BRANCH.TODO INSTALL README TODO COPYING.txt NEWS README_BDIST_RPM"

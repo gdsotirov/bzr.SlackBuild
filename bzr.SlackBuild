@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Slackware build script for Bazaar VCS
-# Copyright (C) 2011 Georgi D. Sotirov <gdsotirov@dir.bg>
+# Copyright (C) 2011-2012 Georgi D. Sotirov <gdsotirov@dir.bg>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -19,13 +19,13 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: bzr.SlackBuild,v 1.6 2011/11/05 06:48:22 gsotirov Exp $
+# $Id: bzr.SlackBuild,v 1.7 2012/03/11 20:12:07 gsotirov Exp $
 #
 
 . ../../slack-package.conf
 
 NAME=bzr
-VERSION=2.4.2
+VERSION=2.5.0
 BUILD=${BUILD:-1}
 ARCH=${ARCH:-i486}
 

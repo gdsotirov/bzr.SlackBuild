@@ -19,13 +19,13 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: bzr.SlackBuild,v 1.7 2012/03/11 20:12:07 gsotirov Exp $
+# $Id: bzr.SlackBuild,v 1.8 2012/06/10 09:43:18 gsotirov Exp $
 #
 
 . ../../slack-package.conf
 
 NAME=bzr
-VERSION=2.5.0
+VERSION=2.5.1
 BUILD=${BUILD:-1}
 ARCH=${ARCH:-i486}
 

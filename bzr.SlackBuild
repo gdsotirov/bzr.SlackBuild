@@ -19,10 +19,10 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: bzr.SlackBuild,v 1.2 2011/07/24 09:09:59 gsotirov Exp $
+# $Id: bzr.SlackBuild,v 1.2.2.1 2018/05/13 15:54:18 gsotirov Exp $
 #
 
-. ../slack-package.conf
+. ../../slack-package.conf
 
 NAME=bzr
 VERSION=2.3.4
